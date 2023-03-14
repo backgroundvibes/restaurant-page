@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("hello there"),(()=>{const e=document.querySelector("#content"),t=document.createElement("h1");t.textContent="Amazing Restaurant",e.appendChild(t)})()})();
