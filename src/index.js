@@ -1,6 +1,7 @@
-import { createTitle, createDescription } from "./dom.js";
+import { createTitle, createDescription, renderImage } from "./dom.js";
 
 const renderHomepage = (() => {
   createTitle();
+  renderImage();
   createDescription();
 })();

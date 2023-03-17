@@ -16,7 +16,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createDescription\": () => (/* binding */ createDescription),\n/* harmony export */   \"createTitle\": () => (/* binding */ createTitle)\n/* harmony export */ });\nconst content = document.querySelector(\"#content\");\n\nfunction createTitle() {\n  const Title = document.createElement(\"h1\");\n  Title.textContent = \"Amazing Restaurant\";\n  content.appendChild(Title);\n}\n\nfunction createDescription() {\n  const Description = document.createElement(\"p\");\n  Description.textContent =\n    \"wow look how amazing this restaurant is so amazing wow\";\n  content.appendChild(Description);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/dom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createDescription\": () => (/* binding */ createDescription),\n/* harmony export */   \"createTitle\": () => (/* binding */ createTitle),\n/* harmony export */   \"renderImage\": () => (/* binding */ renderImage)\n/* harmony export */ });\n/* harmony import */ var _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurant.jpg */ \"./src/restaurant.jpg\");\n\n\nconst content = document.querySelector(\"#content\");\n\nfunction createTitle() {\n  const Title = document.createElement(\"h1\");\n  Title.textContent = \"Amazing Restaurant\";\n  content.appendChild(Title);\n}\n\nfunction renderImage() {\n  const homeImage = new Image();\n  homeImage.src = _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__;\n  content.appendChild(homeImage);\n}\n\nfunction createDescription() {\n  const Description = document.createElement(\"p\");\n  Description.textContent =\n    \"wow look how amazing this restaurant is so amazing wow\";\n  content.appendChild(Description);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/dom.js?");
 
 /***/ }),
 
@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ \"./src/dom.js\");\n\n\nconst renderHomepage = (() => {\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createTitle)();\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createDescription)();\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ \"./src/dom.js\");\n\n\nconst renderHomepage = (() => {\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createTitle)();\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.renderImage)();\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createDescription)();\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant.jpg":
+/*!****************************!*\
+  !*** ./src/restaurant.jpg ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"496eb3fe4d69e349dbe8.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/restaurant.jpg?");
 
 /***/ })
 
@@ -69,6 +79,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -83,6 +105,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
