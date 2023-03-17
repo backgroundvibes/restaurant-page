@@ -1,4 +1,6 @@
-import { Home } from "./homepage.js";
+import { createTitle, createDescription } from "./dom.js";
 
-console.log("hello there");
-Home();
+const renderHomepage = (() => {
+  createTitle();
+  createDescription();
+})();
