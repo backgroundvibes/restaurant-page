@@ -1,24 +1,22 @@
 import restaurantImage from "./restaurant.jpg";
 
-const content = document.querySelector("#content");
-
-function createTitle() {
+function homeTitle() {
   const Title = document.createElement("h1");
   Title.textContent = "Amazing Restaurant";
   content.appendChild(Title);
 }
 
-function renderImage() {
+function homeImage() {
   const homeImage = new Image();
   homeImage.src = restaurantImage;
   content.appendChild(homeImage);
 }
 
-function createDescription() {
+function homeDescription() {
   const Description = document.createElement("p");
   Description.textContent =
     "wow look how amazing this restaurant is so amazing wow";
   content.appendChild(Description);
 }
 
-export { createTitle, renderImage, createDescription };
+export { homeTitle, homeImage, homeDescription };

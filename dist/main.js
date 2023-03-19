@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/dom.js":
-/*!********************!*\
-  !*** ./src/dom.js ***!
-  \********************/
+/***/ "./src/homepage.js":
+/*!*************************!*\
+  !*** ./src/homepage.js ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createDescription\": () => (/* binding */ createDescription),\n/* harmony export */   \"createTitle\": () => (/* binding */ createTitle),\n/* harmony export */   \"renderImage\": () => (/* binding */ renderImage)\n/* harmony export */ });\n/* harmony import */ var _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurant.jpg */ \"./src/restaurant.jpg\");\n\n\nconst content = document.querySelector(\"#content\");\n\nfunction createTitle() {\n  const Title = document.createElement(\"h1\");\n  Title.textContent = \"Amazing Restaurant\";\n  content.appendChild(Title);\n}\n\nfunction renderImage() {\n  const homeImage = new Image();\n  homeImage.src = _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__;\n  content.appendChild(homeImage);\n}\n\nfunction createDescription() {\n  const Description = document.createElement(\"p\");\n  Description.textContent =\n    \"wow look how amazing this restaurant is so amazing wow\";\n  content.appendChild(Description);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/dom.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homeDescription\": () => (/* binding */ homeDescription),\n/* harmony export */   \"homeImage\": () => (/* binding */ homeImage),\n/* harmony export */   \"homeTitle\": () => (/* binding */ homeTitle)\n/* harmony export */ });\n/* harmony import */ var _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurant.jpg */ \"./src/restaurant.jpg\");\n\n\nfunction homeTitle() {\n  const Title = document.createElement(\"h1\");\n  Title.textContent = \"Amazing Restaurant\";\n  content.appendChild(Title);\n}\n\nfunction homeImage() {\n  const homeImage = new Image();\n  homeImage.src = _restaurant_jpg__WEBPACK_IMPORTED_MODULE_0__;\n  content.appendChild(homeImage);\n}\n\nfunction homeDescription() {\n  const Description = document.createElement(\"p\");\n  Description.textContent =\n    \"wow look how amazing this restaurant is so amazing wow\";\n  content.appendChild(Description);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/homepage.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ \"./src/dom.js\");\n\n\nconst renderHomepage = (() => {\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createTitle)();\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.renderImage)();\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.createDescription)();\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n\n\nconst content = document.querySelector(\"#content\");\n\nconst renderHomepage = (() => {\n  (0,_homepage__WEBPACK_IMPORTED_MODULE_0__.homeTitle)();\n  (0,_homepage__WEBPACK_IMPORTED_MODULE_0__.homeImage)();\n  (0,_homepage__WEBPACK_IMPORTED_MODULE_0__.homeDescription)();\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
