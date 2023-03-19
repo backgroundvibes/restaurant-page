@@ -1,9 +1,7 @@
-import { homeTitle, homeImage, homeDescription } from "./homepage";
+import { createHomepage } from "./homepage";
 
 const content = document.querySelector("#content");
 
 const renderHomepage = (() => {
-  homeTitle();
-  homeImage();
-  homeDescription();
+  createHomepage();
 })();
