@@ -5,7 +5,7 @@ homePage.setAttribute("class", "homepage");
 
 function homeHeader() {
   const header = document.createElement("div");
-  header.setAttribute("id", "header");
+  header.setAttribute("id", "home-header");
   homeTitle(header);
   homeTabs(header);
   homePage.appendChild(header);
@@ -39,10 +39,13 @@ function homeTabs(head) {
 }
 
 function homeImage() {
+  const imageContainer = document.createElement("div");
+  imageContainer.setAttribute("id", "image-container");
   const image = new Image();
   image.src = restaurantImage;
   image.setAttribute("id", "home-image");
-  homePage.appendChild(image);
+  imageContainer.appendChild(image);
+  homePage.appendChild(imageContainer);
 }
 
 function homeDescription() {
@@ -53,10 +56,17 @@ function homeDescription() {
   homePage.appendChild(Description);
 }
 
+function homeFooter() {
+  const foot = document.createElement("div");
+  foot.setAttribute("id", "home-footer");
+  homePage.appendChild(foot);
+}
+
 function createHomepage() {
   homeHeader();
   homeImage();
   homeDescription();
+  homeFooter();
   content.appendChild(homePage);
 }
 
