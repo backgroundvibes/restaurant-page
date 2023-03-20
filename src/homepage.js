@@ -59,6 +59,7 @@ function homeDescription() {
 function homeFooter() {
   const foot = document.createElement("div");
   foot.setAttribute("id", "home-footer");
+  foot.textContent = "BOTTOM TEXT";
   homePage.appendChild(foot);
 }
 

@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-header {
+  border: 2px solid red;
+}
+
+#home-title {
+  border: 2px solid green;
+  text-align: center;
+}
+
+#tab-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-image {
+  width: 100%;
+  height: auto;
+}
+
+#home-description {
+  text-align: center;
+}
+
+#home-footer {
+  text-align: center;
+}
