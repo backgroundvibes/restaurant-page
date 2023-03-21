@@ -75,6 +75,22 @@ body {
   font-family: var(--main-font);
 }
 
+#quote-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  background-color: var(--main-bg-colour);
+  padding: 2rem;
+}
+
+#quote-section p {
+  font-family: var(--main-font);
+  font-size: small;
+  color: var(--second-bg-colour);
+}
+
 #home-footer {
   text-align: center;
   background-color: var(--second-bg-colour);
