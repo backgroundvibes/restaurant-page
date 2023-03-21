@@ -25,7 +25,7 @@ body {
 }
 
 #home-title {
-  padding: 2rem;
+  padding: 4rem;
   text-align: center;
   background-color: var(--main-bg-colour);
   font-family: "TitleFont";
@@ -70,7 +70,7 @@ body {
 
 #home-description {
   text-align: center;
-  padding: 3rem;
+  padding: 5rem 4rem 5rem 4rem;
   font-size: large;
   font-family: var(--main-font);
 }
@@ -79,15 +79,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 1rem;
+  column-gap: 3rem;
+  row-gap: 3rem;
   background-color: var(--main-bg-colour);
-  padding: 2rem;
+  padding: 4rem 3rem 4rem 3rem;
 }
 
 #quote-section p {
   font-family: var(--main-font);
-  font-size: small;
+  font-size: medium;
   color: var(--second-bg-colour);
 }
 
