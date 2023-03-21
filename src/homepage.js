@@ -52,7 +52,7 @@ function homeDescription() {
   const Description = document.createElement("p");
   Description.setAttribute("id", "home-description");
   Description.textContent =
-    "wow look how amazing this restaurant is so amazing wow";
+    "Welcome to The Amazing Restaurant, where we are passionate about providing our guests with a memorable dining experience. Our menu features a wide variety of dishes, each prepared using only the freshest and highest quality ingredients. Whether youre joining us for brunch, lunch, or dinner, we have something to satisfy every palate. Our chefs use innovative cooking techniques to create dishes that are both delicious and visually stunning. In addition to our indoor seating area, we also have a lovely outdoor patio where you can enjoy your meal in the fresh air and sunshine. Our patio is the perfect place to relax and unwind with friends and family. At The Amazing Restaurant we also offer an extensive selection of wines, beers, and cocktails, all carefully chosen to complement our menu. Our knowledgeable staff can help you select the perfect pairing for your meal. Thank you for considering The Amazing Restaurant for your next dining experience. We look forward to serving you soon.";
   homePage.appendChild(Description);
 }
 

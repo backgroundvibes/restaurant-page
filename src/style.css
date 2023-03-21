@@ -9,6 +9,13 @@
   --second-bg-colour: rgba(25, 25, 112, 0.85);
 }
 
+@font-face {
+  font-family: "TitleFont";
+  src: url("./title-font.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,6 +27,7 @@ body {
   padding: 2rem;
   text-align: center;
   background-color: var(--main-bg-colour);
+  font-family: "TitleFont";
 }
 
 #tab-bar {
@@ -55,7 +63,8 @@ body {
 
 #home-description {
   text-align: center;
-  padding: 1rem;
+  padding: 3rem;
+  font-size: large;
 }
 
 #home-footer {
