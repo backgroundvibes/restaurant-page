@@ -59,7 +59,7 @@ function homeDescription() {
 function homeFooter() {
   const foot = document.createElement("div");
   foot.setAttribute("id", "home-footer");
-  foot.textContent = "BOTTOM TEXT";
+  foot.textContent = "Photo by Annie Spratt on Unsplash";
   homePage.appendChild(foot);
 }
 
