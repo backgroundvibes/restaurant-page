@@ -11,14 +11,14 @@ function homeHeader() {
   homePage.appendChild(header);
 }
 
-function homeTitle(head) {
+function homeTitle(appendee) {
   const Title = document.createElement("h1");
   Title.setAttribute("id", "home-title");
   Title.textContent = "Amazing Restaurant";
-  head.appendChild(Title);
+  appendee.appendChild(Title);
 }
 
-function homeTabs(head) {
+function homeTabs(appendee) {
   const tabBar = document.createElement("div");
   tabBar.setAttribute("id", "tab-bar");
   for (let i = 0; i < 3; i++) {
@@ -35,7 +35,7 @@ function homeTabs(head) {
     }
     tabBar.appendChild(tab);
   }
-  head.appendChild(tabBar);
+  appendee.appendChild(tabBar);
 }
 
 function homeImage() {
@@ -56,6 +56,21 @@ function homeDescription() {
   homePage.appendChild(Description);
 }
 
+function homeQuoteSection() {
+  const quoteSect = document.createElement("div");
+  quoteSect.setAttribute("id", "quote-section");
+  homeQuotes(quoteSect);
+  homePage.appendChild(quoteSect);
+}
+
+function homeQuotes(appendee) {
+  for (let i = 0; i < 6; i++) {
+    let quote = document.createElement("p");
+    quote.setAttribute("id", `quote${i + 1}`);
+    appendee.appendChild(quote);
+  }
+}
+
 function homeFooter() {
   const foot = document.createElement("div");
   foot.setAttribute("id", "home-footer");
@@ -67,6 +82,7 @@ function createHomepage() {
   homeHeader();
   homeImage();
   homeDescription();
+  homeQuoteSection();
   homeFooter();
   content.appendChild(homePage);
 }
