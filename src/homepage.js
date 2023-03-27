@@ -3,8 +3,30 @@ import restaurantImage from "./restaurant.jpg";
 const homePage = document.createElement("div");
 homePage.setAttribute("class", "homepage");
 
+//Cache Dom
+const header = document.createElement("div");
+const Title = document.createElement("h1");
+const tabBar = document.createElement("div");
+for (let i = 0; i < 3; i++) {
+  const tab = document.createElement("button");
+  tab.setAttribute("class", `tab${i + 1}`);
+  tabBar.appendChild(tab);
+}
+tabBar.setAttribute("id", "tab-bar");
+const imageContainer = document.createElement("div");
+const image = new Image();
+const Description = document.createElement("p");
+const quoteSect = document.createElement("div");
+for (let i = 0; i < 6; i++) {
+  let quote = document.createElement("p");
+  quote.setAttribute("class", `quote${i + 1}`);
+  quoteSect.appendChild(quote);
+}
+quoteSect.setAttribute("id", "quote-section");
+const foot = document.createElement("div");
+
+//Functions for filling website with content and appending to homePage node.
 function homeHeader() {
-  const header = document.createElement("div");
   header.setAttribute("id", "home-header");
   homeTitle(header);
   homeTabs(header);
@@ -12,36 +34,21 @@ function homeHeader() {
 }
 
 function homeTitle(appendee) {
-  const Title = document.createElement("h1");
   Title.setAttribute("id", "home-title");
   Title.textContent = "Amazing Restaurant";
   appendee.appendChild(Title);
 }
 
 function homeTabs(appendee) {
-  const tabBar = document.createElement("div");
-  tabBar.setAttribute("id", "tab-bar");
-  for (let i = 0; i < 3; i++) {
-    const tab = document.createElement("button");
-    tab.setAttribute("id", `tab${i + 1}`);
-    if (i == 0) {
-      tab.textContent = "Home";
-    } else if (i == 1) {
-      tab.textContent = "Menu";
-    } else if (i == 2) {
-      tab.textContent = "Contact Us";
-    } else {
-      console.log("homeTabs if statement went wrong");
-    }
-    tabBar.appendChild(tab);
-  }
+  tabBar.getElementsByClassName("tab1")[0].textContent = "Home";
+  tabBar.getElementsByClassName("tab2")[0].textContent = "Menu";
+  tabBar.getElementsByClassName("tab3")[0].textContent = "Contact Us";
+
   appendee.appendChild(tabBar);
 }
 
 function homeImage() {
-  const imageContainer = document.createElement("div");
   imageContainer.setAttribute("id", "image-container");
-  const image = new Image();
   image.src = restaurantImage;
   image.setAttribute("id", "home-image");
   imageContainer.appendChild(image);
@@ -49,7 +56,6 @@ function homeImage() {
 }
 
 function homeDescription() {
-  const Description = document.createElement("p");
   Description.setAttribute("id", "home-description");
   Description.textContent =
     "Welcome to The Amazing Restaurant, where we are passionate about providing our guests with a memorable dining experience. Our menu features a wide variety of dishes, each prepared using only the freshest and highest quality ingredients. Whether youre joining us for brunch, lunch, or dinner, we have something to satisfy every palate. Our chefs use innovative cooking techniques to create dishes that are both delicious and visually stunning. In addition to our indoor seating area, we also have a lovely outdoor patio where you can enjoy your meal in the fresh air and sunshine. Our patio is the perfect place to relax and unwind with friends and family. At The Amazing Restaurant we also offer an extensive selection of wines, beers, and cocktails, all carefully chosen to complement our menu. Our knowledgeable staff can help you select the perfect pairing for your meal. Thank you for considering The Amazing Restaurant for your next dining experience. We look forward to serving you soon.";
@@ -57,13 +63,11 @@ function homeDescription() {
 }
 
 function homeQuoteSection() {
-  const quoteSect = document.createElement("div");
-  quoteSect.setAttribute("id", "quote-section");
-  homeQuotes(quoteSect);
+  homeQuotes();
   homePage.appendChild(quoteSect);
 }
 
-function homeQuotes(appendee) {
+function homeQuotes() {
   const quotes = [
     "From the moment I walked in, I knew I was in for a treat. The atmosphere was warm and inviting, and the service was impeccable. I couldn't wait to see what was on the menu, and I was not disappointed. This restaurant is a must-visit for anyone who loves great food and a great experience. -ChatGPT",
     "The flavors in every dish were exquisite, and the presentation was a work of art. Each bite was like a journey through a symphony of tastes and textures. This restaurant is truly a hidden gem that deserves to be discovered. -ChatGPT",
@@ -72,16 +76,16 @@ function homeQuotes(appendee) {
     "If you're looking for a dining experience that is both sophisticated and fun, this restaurant is the perfect choice. The menu is diverse and innovative, with something to please every palate. I can't recommend this place enough. -ChatGPT",
     "I was blown away by the quality of the food and the service at this restaurant. It's clear that the chef and staff take great pride in what they do, and it shows in every dish. This is the kind of restaurant that you'll want to come back to again and again. -ChatGPT",
   ];
-  for (let i = 0; i < 6; i++) {
-    let quote = document.createElement("p");
-    quote.setAttribute("id", `quote${i + 1}`);
-    quote.textContent = `${quotes[i]}`;
-    appendee.appendChild(quote);
-  }
+
+  quoteSect.getElementsByClassName("quote1")[0].textContent = quotes[0];
+  quoteSect.getElementsByClassName("quote2")[0].textContent = quotes[1];
+  quoteSect.getElementsByClassName("quote3")[0].textContent = quotes[2];
+  quoteSect.getElementsByClassName("quote4")[0].textContent = quotes[3];
+  quoteSect.getElementsByClassName("quote5")[0].textContent = quotes[4];
+  quoteSect.getElementsByClassName("quote6")[0].textContent = quotes[5];
 }
 
 function homeFooter() {
-  const foot = document.createElement("div");
   foot.setAttribute("id", "home-footer");
   foot.textContent = "Photo by Annie Spratt on Unsplash";
   homePage.appendChild(foot);
