@@ -24,7 +24,13 @@ body {
   align-items: center;
 }
 
-#home-title {
+#content,
+.menu-page,
+#header {
+  width: 100%;
+}
+
+#title {
   padding: 3rem;
   text-align: center;
   background-color: var(--main-bg-colour);

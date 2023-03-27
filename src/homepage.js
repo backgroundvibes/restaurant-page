@@ -27,14 +27,14 @@ const foot = document.createElement("div");
 
 //Functions for filling website with content and appending to homePage node.
 function homeHeader() {
-  header.setAttribute("id", "home-header");
+  header.setAttribute("id", "header");
   homeTitle(header);
   homeTabs(header);
   homePage.appendChild(header);
 }
 
 function homeTitle(appendee) {
-  Title.setAttribute("id", "home-title");
+  Title.setAttribute("id", "title");
   Title.textContent = "Amazing Restaurant";
   appendee.appendChild(Title);
 }
