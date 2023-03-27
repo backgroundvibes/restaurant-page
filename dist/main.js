@@ -120,6 +120,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContactPage\": () => (/* binding */ createContactPage)\n/* harmony export */ });\nconst contactPage = document.createElement(\"div\");\ncontactPage.setAttribute(\"class\", \"contact-page\");\n\nfunction createContactPage() {\n  content.appendChild(contactPage);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/homepage.js":
 /*!*************************!*\
   !*** ./src/homepage.js ***!
@@ -136,7 +146,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\nconst content = document.querySelector(\"#content\");\n\n(0,_homepage__WEBPACK_IMPORTED_MODULE_0__.createHomepage)();\n\nconst tabs = document.querySelectorAll(\"#tab-bar\");\ntabs.forEach((tab) => {\n  tab.addEventListener(\"click\", (e) => {\n    if (e.target.textContent == \"Home\") {\n      let toRemove = tab.closest(\"#content > div\");\n      toRemove.remove();\n      (0,_homepage__WEBPACK_IMPORTED_MODULE_0__.createHomepage)();\n    }\n  });\n});\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homepage */ \"./src/homepage.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\n\nconst content = document.querySelector(\"#content\");\n\n(0,_homepage__WEBPACK_IMPORTED_MODULE_0__.createHomepage)();\n\nconst tabs = document.querySelectorAll(\"#tab-bar\");\ntabs.forEach((tab) => {\n  tab.addEventListener(\"click\", (e) => {\n    let toRemove = tab.closest(\"#content > div\");\n    toRemove.remove();\n    if (e.target.textContent == \"Home\") {\n      (0,_homepage__WEBPACK_IMPORTED_MODULE_0__.createHomepage)();\n    } else if (e.target.textContent == \"Menu\") {\n      (0,_menu__WEBPACK_IMPORTED_MODULE_1__.createMenuPage)();\n    } else if (e.target.textContent == \"Contact Us\") {\n      (0,_contact__WEBPACK_IMPORTED_MODULE_2__.createContactPage)();\n    }\n  });\n});\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenuPage\": () => (/* binding */ createMenuPage)\n/* harmony export */ });\nconst menuPage = document.createElement(\"div\");\nmenuPage.setAttribute(\"class\", \"menu-page\");\n\nfunction createMenuPage() {\n  content.appendChild(menuPage);\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ }),
 
