@@ -12,6 +12,7 @@ for (let i = 0; i < 3; i++) {
 }
 tabBar.setAttribute("id", "tab-bar");
 
+//Functions for filling website with content and appending to homePage node.
 function menuHeader() {
   header.setAttribute("id", "header");
   menuTitle(header);
