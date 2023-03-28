@@ -55,10 +55,18 @@ body {
 
 #tab-bar button:hover {
   background-color: rgba(35, 35, 160, 0.5);
+  cursor: pointer;
+  box-shadow: 0 4px #999;
+  transform: translateY(-4px);
 }
 
-#tab1,
-#tab3 {
+#tab-bar button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+.tab1,
+.tab3 {
   border-width: 0px 2px 0px 2px;
   border-style: solid;
   border-color: var(--main-bg-colour);
